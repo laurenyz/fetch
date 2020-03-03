@@ -1,9 +1,7 @@
 <h1>Welcome to Fetch!</h1>
 
-<h2>We're currently serving the following areas:</h2>
-<ul>
-<% @locations.each do |location| %>
-<li><%= link_to location.city, location_path(location) %></li>
-<% end %>
-</ul>
+<%= link_to "Available Cities", locations_path%>
 
+<%= link_to "Client Log In", user_login_path %>
+
+<%= link_to "PetXpert Log In", petxpert_login_path%>

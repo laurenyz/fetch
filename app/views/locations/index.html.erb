@@ -1,0 +1,8 @@
+<h1>We're currently serving the following areas:</h1>
+<ul>
+<% @locations.each do |location| %>
+<li><%= link_to location.city, location_path(location) %></li>
+<% end %>
+</ul>
+
+<%= link_to "Back to Homepage", homepage_path %>

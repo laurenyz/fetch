@@ -1,7 +1,7 @@
 <h1>Avaliable PetXperts:</h1>
 <ul>
     <% @petxperts.each do |petxpert| %>
-    <li><%= link_to petxpert.name.capitalize, petxpert_path(petxpert) %></li>
+    <li><%= link_to "#{petxpert.name.capitalize} - #{petxpert.location.city}", petxpert_path(petxpert) %></li>
     <% end %>
 </ul>
 

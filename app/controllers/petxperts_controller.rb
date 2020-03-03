@@ -1,8 +1,13 @@
 class PetxpertsController < ApplicationController
     before_action :find_petxpert, only: [:show, :edit, :update, :destroy]
 
+    def login
+
+    end
+
     def index
         @petxperts = Petxpert.all
+        @petxperts = @petxperts.sort_by{|petxpert| petxpert.name.downcase}
     end
 
     def show
