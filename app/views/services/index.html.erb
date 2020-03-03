@@ -1,0 +1,10 @@
+<h1>Avaliable Services:</h1>
+<ul>
+    <% @services.each do |service| %>
+    <li><%= link_to service.name.capitalize, service_path(service) %></li>
+    <% end %>
+</ul>
+
+<div>
+    <%= link_to "Add a Service", new_service_path %>
+</div>

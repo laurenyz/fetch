@@ -1,0 +1,17 @@
+<h1>Location: <%=@location.city%></h1>
+
+<h2>Available Services:</h2>
+<ul>
+<% @location.services.uniq.each do |service|%>
+<li><%= link_to service.name, service_path(service) %></li>
+<% end %>
+</ul>
+
+<h2>Available PetXperts:</h2>
+<ul>
+    <% @location.petxperts.each do |petxpert|%>
+    <li><%= link_to petxpert.name, petxpert_path(petxpert) %></li>
+    <% end %>
+</ul>
+
+<%= link_to "Back to Homepage", homepage_path %>

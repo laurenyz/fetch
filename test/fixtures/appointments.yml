@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pet_id: 1
+  pexpert_id: 1
+  date: 2020-03-02
+  time: 2020-03-02 11:27:13
+
+two:
+  pet_id: 1
+  pexpert_id: 1
+  date: 2020-03-02
+  time: 2020-03-02 11:27:13

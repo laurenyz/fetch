@@ -1,0 +1,48 @@
+class PetxpertsController < ApplicationController
+    before_action :find_petxpert, only: [:show, :edit, :update, :destroy]
+
+    def index
+        @petxperts = Petxpert.all
+    end
+
+    def show
+    end
+
+    def new
+        @petxpert = Petxpert.new
+    end
+
+    def create
+        @petxpert = Petxpert.new(petxpert_params)
+        if @petxpert.valid?
+            @petxpert.save
+            redirect_to petxpert_path(@petxpert)
+        else
+            render :new
+        end
+    end
+
+    def edit
+    end
+
+    def update
+        @petxpert.update(petxpert_params)
+        redirect_to petxpert_path(@petxpert)
+    end
+    
+    def destroy
+        @petxpert.destroy
+        redirect_to petxperts_path
+    end
+
+
+private
+    def petxpert_params
+        params.require(:petxpert).permit(:name, :username, :description, :location_id)
+    end
+
+    def find_petxpert
+        @petxpert = Petxpert.find(params[:id])
+    end
+
+end

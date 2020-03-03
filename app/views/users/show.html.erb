@@ -1,0 +1,22 @@
+<h1><%=@user.username %>'s Profile</h1>
+
+<h2>Name: <%=@user.name.capitalize%></h2>
+<h2>Address: <%=@user.address%></h2>
+<h2>Location: <%=@user.location.city%></h2>
+
+<h2>Appointment Log:
+    <ul>
+        <% @user.appointments.each do |appointment|%>
+        <li><%="#{appointment.appt_time.strftime("%B %e, %Y")} - #{appointment.pet.name}"%></li>
+        <% end %>
+    </ul>
+</h2>
+
+<h4><%= link_to "Edit this User", edit_user_path%></h4>
+<h4><%= link_to "Return to Users", users_path%></h4>
+
+<%= form_tag(user_path(@user), method: :delete) do %>
+    <div>
+    <%= submit_tag "Delete this User" %>
+    </div>
+<% end %>

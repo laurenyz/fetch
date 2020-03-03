@@ -1,0 +1,11 @@
+<h1>Create a User Profile</h1>
+
+<% if @user.errors %>
+<ul class = "error_list" %>
+    <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= render "form" %>

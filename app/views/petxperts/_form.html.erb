@@ -1,0 +1,19 @@
+<%= form_for @petxpert do |f| %>
+    <div>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :username, "Username:" %>
+        <%= f.text_field :username %>
+    </div>
+    <div>
+    <%= f.label :description, "Bio:"%>
+    <%= f.text_area :description %>
+    </div>
+    <div>
+    <%=f.label :location %>
+    <%= f.collection_select :location_id, Location.all, :id, :city %>
+    </div>
+    <%= f.submit %>
+<% end %>

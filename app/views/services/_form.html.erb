@@ -1,0 +1,15 @@
+<%= form_for @service do |f| %>
+    <div>
+    <%= f.label :name, "Type of Service:" %>
+    <%= f.text_field :name %>
+    </div>
+    <div>
+    <%= f.label :description, "Description:"%>
+    <%= f.text_area :description %>
+    </div>
+    <div>
+    <%= f.label :price, "Price:" %>
+    <%= f.number_field :price %>
+    </div>
+    <%= f.submit %>
+<% end %>

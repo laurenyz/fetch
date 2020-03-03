@@ -1,0 +1,11 @@
+<h1>Create a PetXpert Profile</h1>
+
+<% if @petxpert.errors %>
+<ul class = "error_list" %>
+    <% @petxpert.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= render "form" %>
