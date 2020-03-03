@@ -6,6 +6,7 @@ class AppointmentsController < ApplicationController
 
     def new
         @appointment = Appointment.new
+        @user = User.find(session[:user_id])
     end
 
     def create
