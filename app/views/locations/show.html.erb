@@ -3,7 +3,7 @@
 <h2>Available Services:</h2>
 <ul>
 <% @location.services.uniq.each do |service|%>
-<li><%= link_to service.name, service_path(service) %></li>
+<li><%= link_to service.cap_service_name, service_path(service) %></li>
 <% end %>
 </ul>
 

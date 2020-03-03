@@ -12,4 +12,5 @@ class Service < ApplicationRecord
     def cap_service_name
         self.name.capitalize
     end
+
 end

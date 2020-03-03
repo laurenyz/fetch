@@ -9,6 +9,6 @@ class User < ApplicationRecord
     validates :address, presence: true
 
     def cap_user_name
-        self.name.capitalize
+        self.name.titleize
     end
 end
