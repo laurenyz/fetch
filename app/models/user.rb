@@ -7,4 +7,8 @@ class User < ApplicationRecord
     validates :name, presence: true
     validates :username, presence: true, uniqueness: {case_sensitive: false}
     validates :address, presence: true
+
+    def cap_user_name
+        self.name.capitalize
+    end
 end

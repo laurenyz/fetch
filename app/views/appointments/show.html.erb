@@ -1,0 +1,11 @@
+<h1>Appointment for: <%=@appointment.pet.name%></h1>
+
+<h2>Date: <%= @appointment.written_date%></h2>
+
+<h2>Time: <%= @appointment.written_time%></h3>
+
+<h3>Service: <%=@appointment.service.cap_service_name%></h3>
+
+<h3>Cost: <%=@appointment.service.price%></h3>
+
+<%= link_to "Edit this Appointment", edit_appointment_path %>

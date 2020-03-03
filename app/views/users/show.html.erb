@@ -1,16 +1,17 @@
 <h1><%=@user.username %>'s Profile</h1>
 
-<h2>Name: <%=@user.name.capitalize%></h2>
+<h2>Name: <%=@user.cap_user_name%></h2>
 <h2>Address: <%=@user.address%></h2>
 <h2>Location: <%=@user.location.city%></h2>
 
 <h2>Appointment Log:
     <ul>
         <% @user.appointments.each do |appointment|%>
-        <li><%="#{appointment.appt_time.strftime("%B %e, %Y")} - #{appointment.pet.name}"%></li>
+        <li><%=link_to "#{appointment.written_date} - #{appointment.pet.name}", appointment_path(appointment)%></li>
         <% end %>
     </ul>
 </h2>
+
 
 <h4><%= link_to "Edit this User", edit_user_path%></h4>
 <h4><%= link_to "Return to Users", users_path%></h4>

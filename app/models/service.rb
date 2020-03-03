@@ -8,4 +8,8 @@ class Service < ApplicationRecord
     validates :name, presence: true
     validates :description, presence: true
     validates :price, presence: true
+
+    def cap_service_name
+        self.name.capitalize
+    end
 end
