@@ -11,10 +11,11 @@ class PetsController < ApplicationController
 
     def new
         @pet = Pet.new
+        @user = User.find(session[:user_id])
     end
 
     def create
-        @pet = Pet.new(pet_params)
+        @pet = Pet.new(name: params[:pet][:name], species: params[:pet][:species], age: params[:pet][:age], description: params[:pet][:description], user_id: session[:owner_id])
         if @pet.valid?
             @pet.save
             redirect_to pet_path(@pet)

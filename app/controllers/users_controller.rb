@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     end
 
     def show
+        session[:owner_id] = @user.id
     end
 
     def new

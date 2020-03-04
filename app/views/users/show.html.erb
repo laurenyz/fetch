@@ -4,13 +4,22 @@
 <h2>Address: <%=@user.address%></h2>
 <h2>Location: <%=@user.location.city%></h2>
 
-<h2>Appointment Log:
+<h2>Pets:</h2>
+<ul>
+    <% @user.pets.each do |pet| %>
+    <li><%= link_to pet.name, pet_path(pet) %></li>
+    <% end %>
+</ul>
+
+<h2>Appointment Log:</h2>
     <ul>
         <% @user.appointments.each do |appointment|%>
         <li><%=link_to "#{appointment.written_date} - #{appointment.pet.name}", appointment_path(appointment)%></li>
         <% end %>
     </ul>
-</h2>
+
+
+<h4><%= link_to "Add a Pet", new_pet_path%></h4>
 
 <h4><%= link_to "Make an Appointment", new_appointment_path%></h4>
 
