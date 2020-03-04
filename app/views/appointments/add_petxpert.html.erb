@@ -1,0 +1,8 @@
+<h1>Add Your Service Provider</h1>
+
+<%= form_tag add_petxpert_path do %>
+<%= label_tag :petxpert_id, "PetXpert:" %>
+<%= select_tag :petxpert_id, options_from_collection_for_select(@service.petxperts, :id, :name)%>
+<%= submit_tag "Create Appointment" %>
+<% end %>
+

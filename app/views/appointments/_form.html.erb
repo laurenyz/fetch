@@ -1,15 +1,21 @@
-<%= form_for @appointment do |f| %>
-    <div>
-    <%= f.label :pet, "Pet:" %>
-    <%= f.collection_select :pet_id, @user.pets, :id, :name %>
-    </div>
-    <div>
-    <%= f.label :service, "Service:" %>
-    <%= f.collection_select :service_id, Service.all, :id, :name %>  
-    </div>
-    <div>
-    <%= f.label :appt_time, "Select Date & Time:" %>
-    <%= f.datetime_select :appt_time %>
-    </div>
-    <%= f.submit %>
+
+
+<%= form_tag create_appointment_path do %>
+<div>
+<%= label_tag :pet_id, "Pet:" %>
+<%= select_tag :pet_id, options_from_collection_for_select(@user.pets, :id, :name) %>
+</div>
+<div>
+<%= label_tag :service_id, "Service:" %>
+<%= select_tag :service_id, options_from_collection_for_select(Service.all, :id, :name) %>
+</div>
+<div>
+<%= label_tag :date, "Date:" %>
+<%= date_field_tag :date %>
+</div>
+<div>
+<%= label_tag :time, "Time:" %>
+<%= time_select :appt_time, :time %>
+</div>
+<%= submit_tag "Continue" %>
 <% end %>
