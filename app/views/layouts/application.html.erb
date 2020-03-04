@@ -24,6 +24,10 @@
       <span><%= link_to "Pet Owner Login", user_login_path %></span>
       <span><%= link_to "PetXpert Login", petxpert_login_path%></span>
     <% end %>
+
+    <% if flash[:warning]%>
+    <div class = "warning"><%= flash[:warning]%></div>
+    <% end %>
       
   </div>
     <%= yield %>

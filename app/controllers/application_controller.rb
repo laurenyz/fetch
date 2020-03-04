@@ -10,6 +10,15 @@ class ApplicationController < ActionController::Base
         return @current_user
     end
 
+    def logged_in_user?
+        !!current_user
+    end
+
+    def authorized_user
+        flash[:warning] = "You must be logged in."
+        redirect_to user_login_path unless logged_in_user?
+    end
+
     def current_petxpert
         if session[:petxpert_id]
         @current_petxpert ||= Petxpert.find(session[:petxpert_id])
@@ -17,6 +26,15 @@ class ApplicationController < ActionController::Base
         @current_petxpert = nil
         end
         return @current_petxpert
+    end
+
+    def logged_in_petxpert?
+        !!current_petxpert
+    end
+
+    def authorized_petxpert
+        flash[:warning] = "You must be logged in."
+        redirect_to petxpert_login_path unless logged_in_petxpert?
     end
 
     def homepage

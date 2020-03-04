@@ -1,5 +1,6 @@
 class PetxpertsController < ApplicationController
     before_action :find_petxpert, only: [:show, :edit, :update, :destroy]
+    before_action :authorized_petxpert, only: [:edit, :update, :destroy]
 
     def login
 
