@@ -6,7 +6,6 @@ resources :services
 resources :petxperts
 resources :users
 resources :pets
-resources :petxpert_services, except: [:index, :show]
 resources :locations, only: [:index, :show]
 resources :appointments, except: [:index, :create, :update]
 

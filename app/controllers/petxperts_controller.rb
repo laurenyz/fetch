@@ -43,7 +43,7 @@ class PetxpertsController < ApplicationController
 
 private
     def petxpert_params
-        params.require(:petxpert).permit(:name, :username, :description, :location_id)
+        params.require(:petxpert).permit(:name, :username, :description, :location_id, service_ids: [])
     end
 
     def find_petxpert

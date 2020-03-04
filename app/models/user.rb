@@ -9,7 +9,7 @@ class User < ApplicationRecord
     validates :address, presence: true
     has_secure_password
 
-    def cap_user_name
-        self.name.titleize
-    end
+    # def cap_user_name
+    #     self.name.titleize
+    # end
 end

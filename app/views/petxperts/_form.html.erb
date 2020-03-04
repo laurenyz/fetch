@@ -12,8 +12,12 @@
     <%= f.text_area :description %>
     </div>
     <div>
-    <%=f.label :location %>
+    <%= f.label :location %>
     <%= f.collection_select :location_id, Location.all, :id, :city %>
+    </div>
+    <div>
+    <%= f.label :services %>
+    <%= f.collection_check_boxes :service_ids, Service.all, :id, :name%>
     </div>
     <%= f.submit %>
 <% end %>
