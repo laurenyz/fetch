@@ -17,9 +17,9 @@ wash = Location.create!(city: "Washington, DC")
 nyc = Location.create!(city: "New York, NY")
 buff = Location.create!(city: "Buffalo, NY")
 
-lauren = User.create!(name: "Lauren", username: "LDawg", address: "E Capitol St.", photo: nil, location: wash)
-ryan = User.create!(name: "Ryan", username: "RGuy", address: "Frederick Douglass", photo: nil, location: nyc)
-eileen = User.create!(name: "Eileen", username: "EE", address: "F. Creek", photo: nil, location: buff)
+lauren = User.create!(name: "Lauren", username: "LDawg", address: "E Capitol St.", photo: nil, location: wash, password: "lauren")
+ryan = User.create!(name: "Ryan", username: "RGuy", address: "Frederick Douglass", photo: nil, location: nyc, password: "ryan")
+eileen = User.create!(name: "Eileen", username: "EE", address: "F. Creek", photo: nil, location: buff, password: "eileen")
 
 tyrion = Pet.create!(name: "Tyrion", species: "cat", age: 5, photo: nil, description: "Chubby but lovely", user: lauren)
 sam_cat = Pet.create!(name: "Samwell", species: "cat", age: 5, photo: nil, description: "Quirky yet adorable", user: lauren)

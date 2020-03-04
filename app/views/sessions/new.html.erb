@@ -1,8 +1,18 @@
 <h1>Client Login</h1>
 
+<div>
+<%=flash[:notice]%>
+</div>
+
 <%= form_tag user_login_path do %>
-    <%= label_tag :username %>
+    <div>
+    <%= label_tag :username, "Username"%>
     <%= text_field_tag :username %>
+    </div>
+    <div>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    </div>
     <%= submit_tag "Login"%>
 <% end %>
 
