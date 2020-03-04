@@ -1,4 +1,4 @@
-<h1><%=@pet.name%>'s Profile</h1>
+<h1><%=@pet.name.titleize%>'s Profile</h1>
 
 <h2>Owner: <%=link_to @pet.user.username, user_path(@pet.user)%></h2>
 <h2>Species: <%=@pet.species%></h2>

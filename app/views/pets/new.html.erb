@@ -1,3 +1,11 @@
 <h1>Add a Pet</h1>
 
+<% if @pet.errors %>
+<ul class = "error_list" %>
+    <% @pet.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
 <%= render "form" %>
