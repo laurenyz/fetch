@@ -26,10 +26,10 @@ sam_cat = Pet.create!(name: "Samwell", species: "cat", age: 5, photo: nil, descr
 hazel = Pet.create!(name: "Hazel", species: "dog", age: 6, photo: nil, description: "The perfect lady", user: ryan)
 josie = Pet.create!(name: "Josie", species: "dog", age: 10, photo: nil, description: "The best dog.", user: eileen)
 
-chris = Petxpert.create!(name: "Chris", username: "JazzDude", photo: nil, description: "Give me them cats.  Dogs are ok, too.", location: wash)
-audrey = Petxpert.create!(name: "Audrey", username: "Audgepodge", photo: nil, description: "I'm the nicest person ever.", location: buff)
-jacquie = Petxpert.create!(name: "Jacquie", username: "Jax&Chuck", photo: nil, description: "I love animals more than I love eating.", location: wash)
-sam = Petxpert.create!(name: "Sam", username: "Quiggs", photo: nil, description: "I'm as relaxed as you want your dog to be.", location: nyc)
+chris = Petxpert.create!(name: "Chris", username: "JazzDude", photo: nil, description: "Give me them cats.  Dogs are ok, too.", location: wash, password: "chris")
+audrey = Petxpert.create!(name: "Audrey", username: "Audgepodge", photo: nil, description: "I'm the nicest person ever.", location: buff, password: "audrey")
+jacquie = Petxpert.create!(name: "Jacquie", username: "Jax&Chuck", photo: nil, description: "I love animals more than I love eating.", location: wash, password: "jacquie")
+sam = Petxpert.create!(name: "Sam", username: "Quiggs", photo: nil, description: "I'm as relaxed as you want your dog to be.", location: nyc, password: "sam")
 
 grooming = Service.create!(name: "grooming", price: 30.00, description: "Get ready to lose some hair!")
 walk = Service.create(name: "walk", price: 20.00, description: "Who's ready to move their leggies?!")

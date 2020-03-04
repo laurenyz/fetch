@@ -33,8 +33,9 @@ class PetsController < ApplicationController
     end
     
     def destroy
+        @user = @pet.user
         @pet.destroy
-        redirect_to pets_path
+        redirect_to user_path(@user)
     end
 
 
@@ -44,7 +45,6 @@ private
     end
 
     def find_pet
-       
         @pet = Pet.find(params[:id])
     end
 end

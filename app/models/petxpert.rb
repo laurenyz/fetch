@@ -8,4 +8,5 @@ class Petxpert < ApplicationRecord
     validates :name, presence: true
     validates :username, presence: true
     validates :description, presence: true, uniqueness: {case_sensitive: false}
+    has_secure_password
 end

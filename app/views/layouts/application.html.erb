@@ -14,12 +14,15 @@
     <span><%= link_to "Home", homepage_path %></span>
     <span><%= link_to "Cities", locations_path%></span>
    
-    <% if session[:user_id] %>
+    <% if session[:user_id]%>
       <span><%= link_to "My Account", user_path(session[:user_id])%></span>
-      <span><%= link_to "Logout", user_logout_path %></span>
+      <span><%= link_to "Logout", logout_path %></span>
+    <% elsif session[:petxpert_id]%>
+      <span><%= link_to "My Account", petxpert_path(session[:petxpert_id])%></span>
+      <span><%= link_to "Logout", logout_path %></span>
     <% else %>
-      <span><%= link_to "Client Log In", user_login_path %></span>
-      <span><%= link_to "PetXpert Log In", petxpert_login_path%></span>
+      <span><%= link_to "Pet Owner Login", user_login_path %></span>
+      <span><%= link_to "PetXpert Login", petxpert_login_path%></span>
     <% end %>
       
   </div>

@@ -37,13 +37,13 @@ class PetxpertsController < ApplicationController
     
     def destroy
         @petxpert.destroy
-        redirect_to petxperts_path
+        redirect_to logout_path
     end
 
 
 private
     def petxpert_params
-        params.require(:petxpert).permit(:name, :username, :description, :location_id, service_ids: [])
+        params.require(:petxpert).permit(:name, :username, :description, :location_id, :password, service_ids: [])
     end
 
     def find_petxpert
