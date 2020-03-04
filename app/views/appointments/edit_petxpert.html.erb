@@ -1,0 +1,8 @@
+<h1>Edit Your Service Provider</h1>
+
+<%= form_tag update_with_petxpert_path do %>
+<%= label_tag :petxpert_id, "PetXpert:" %>
+<%= select_tag :petxpert_id, options_from_collection_for_select(@service.petxperts, :id, :name)%>
+<%= submit_tag "Complete Update" %>
+<% end %>
+

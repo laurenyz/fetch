@@ -1,6 +1,6 @@
 class Appointment < ApplicationRecord
     belongs_to :pet
-    belongs_to :petxpert
+    belongs_to :petxpert, optional: true
     belongs_to :service
 
     def written_date

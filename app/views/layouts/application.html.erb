@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <%= link_to "Home", homepage_path %>
+    <%= link_to "Cities", locations_path%>
+    <%= link_to "Client Log In", user_login_path %>
+    <%= link_to "PetXpert Log In", petxpert_login_path%>
     <%= yield %>
   </body>
 </html>
