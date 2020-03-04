@@ -12,6 +12,7 @@ resources :appointments, except: [:index, :create, :update]
 
 get '/', to: "application#homepage", as: "homepage"
 get '/user/login', to: "sessions#new", as: "user_login"
+get '/user/logout/', to: "sessions#logout", as: "user_logout"
 get '/petxpert/login', to: "petxperts#login", as: "petxpert_login"
 post '/user/login', to: "sessions#create"
 post '/appointments/add_petxpert', to: "appointments#create", as: "create_appointment"

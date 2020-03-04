@@ -13,4 +13,10 @@ class SessionsController < ApplicationController
     end
   end
 
+  def logout
+      session.clear
+      redirect_to user_login_path
+  end
+
+
 end
