@@ -13,4 +13,10 @@ class Service < ApplicationRecord
         self.name.capitalize
     end
 
+    def local_petxperts(location)
+        self.petxperts.select do |petxpert|
+            petxpert.location == location
+        end
+    end
+
 end

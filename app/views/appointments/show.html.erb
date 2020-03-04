@@ -6,6 +6,8 @@
 
 <h3>Service: <%=@appointment.service.cap_service_name%></h3>
 
+<h3>PetXpert: <%=link_to @appointment.petxpert.name, petxpert_path(@appointment.petxpert)%></h3>
+
 <h3>Cost: <%=number_to_currency(@appointment.service.price)%></h3>
 
 <%= link_to "Edit this Appointment", edit_appointment_path %>

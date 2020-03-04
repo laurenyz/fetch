@@ -7,7 +7,7 @@
     </div>
     <div>
     <%= label_tag :service_id, "Service:" %>
-    <%= select_tag :service_id, options_from_collection_for_select(Service.all, :id, :name) %>
+    <%= select_tag :service_id, options_from_collection_for_select(@user.location.services.uniq, :id, :name) %>
     </div>
     <div>
     <%= label_tag :date, "Date:" %>
