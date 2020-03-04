@@ -36,6 +36,7 @@ class AppointmentsController < ApplicationController
         @appt_time = "#{params[:date]} #{params[:appt_time]['time(4i)']}:#{params[:appt_time]['time(5i)']}:00"
         @appointment.update(pet: @pet, service: @service, appt_time: @appt_time)
         session[:appointment_id]=@appointment.id
+        @location = @appointment.pet.user.location
         render :edit_petxpert
     end
 

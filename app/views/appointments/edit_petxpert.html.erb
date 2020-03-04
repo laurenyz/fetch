@@ -2,7 +2,7 @@
 
 <%= form_tag update_with_petxpert_path do %>
 <%= label_tag :petxpert_id, "PetXpert:" %>
-<%= select_tag :petxpert_id, options_from_collection_for_select(@service.petxperts, :id, :name)%>
+<%= select_tag :petxpert_id, options_from_collection_for_select(@service.local_petxperts(@location), :id, :name)%>
 <%= submit_tag "Complete Update" %>
 <% end %>
 

@@ -44,5 +44,5 @@ PetxpertService.create(petxpert: sam, service: walk)
 PetxpertService.create(petxpert: sam, service: grooming)
 
 Appointment.create(pet: tyrion, petxpert: chris, service: grooming, appt_time: "2020-03-11 15:00:00")
-Appointment.create(pet: sam_cat, petxpert: audrey, service: home_visit, appt_time: "2020-06-18 8:00:00")
+Appointment.create(pet: hazel, petxpert: sam, service: walk, appt_time: "2020-06-18 8:00:00")
 Appointment.create(pet: josie, petxpert: jacquie, service: walk, appt_time: "2020-07-04 12:30:00")
