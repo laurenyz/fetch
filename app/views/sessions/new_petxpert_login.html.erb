@@ -1,19 +1,21 @@
-<h1>PetXpert Login</h1>
+<div class="page-body petxpert-login">
+    <h1 class="page-title">PetXpert Login</h1>
 
-<div>
-<%=flash[:notice]%>
+    <div>
+    <%= flash[:notice]%>
+    </div>
+
+    <%= form_tag petxpert_login_path do %>
+        <div>
+        <%= label_tag :username, "Username"%>
+        <%= text_field_tag :username %>
+        </div>
+        <div>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+        </div>
+        <%= submit_tag "Login"%>
+    <% end %>
+
+    <%= link_to "Register as a PetXpert", new_petxpert_path %>
 </div>
-
-<%= form_tag petxpert_login_path do %>
-    <div>
-    <%= label_tag :username, "Username"%>
-    <%= text_field_tag :username %>
-    </div>
-    <div>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-    </div>
-    <%= submit_tag "Login"%>
-<% end %>
-
-<%= link_to "Register as a PetXpert", new_petxpert_path %>

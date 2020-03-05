@@ -1,19 +1,21 @@
-<h1>Pet Owner Login</h1>
+<div class="page-body user-login">
+    <h1 class="page-title">Pet Owner Login</h1>
 
-<div>
-<%=flash[:notice]%>
+    <div>
+    <%=flash[:notice]%>
+    </div>
+
+    <%= form_tag user_login_path do %>
+        <div>
+        <%= label_tag :username, "Username"%>
+        <%= text_field_tag :username %>
+        </div>
+        <div>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+        </div>
+        <%= submit_tag "Login"%>
+    <% end %>
+
+    <%= link_to "Create Account", new_user_path %>
 </div>
-
-<%= form_tag user_login_path do %>
-    <div>
-    <%= label_tag :username, "Username"%>
-    <%= text_field_tag :username %>
-    </div>
-    <div>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-    </div>
-    <%= submit_tag "Login"%>
-<% end %>
-
-<%= link_to "Create Account", new_user_path %>
