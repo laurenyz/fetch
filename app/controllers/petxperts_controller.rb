@@ -22,6 +22,7 @@ class PetxpertsController < ApplicationController
         @petxpert = Petxpert.new(petxpert_params)
         if @petxpert.valid?
             @petxpert.save
+            session[:petxpert_id] = @petxpert.id
             redirect_to petxpert_path(@petxpert)
         else
             render :new
