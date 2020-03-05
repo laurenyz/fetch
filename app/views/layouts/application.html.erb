@@ -13,21 +13,23 @@
 
   <body>
 
+  
+
     <div class="ui secondary menu">
     
-      <span class="nav-link"><%= link_to "HOME", homepage_path %></span>
-      <span class="nav-link"><%= link_to "CITIES", locations_path%></span>
+      <button class="ui button nav-button"><%= link_to "HOME", homepage_path %></button>
+      <button class="ui button nav-button"><%= link_to "CITIES", locations_path%></button>
 
       <div class="right menu"> 
           <% if session[:user_id]%>
-            <span class="nav-link"><%= link_to "MY ACCOUNT", user_path(session[:user_id])%></span>
-            <span class="nav-link"><%= link_to "LOGOUT", logout_path %></span>
+            <button class="ui button nav-button"><%= link_to "MY ACCOUNT", user_path(session[:user_id])%></button>
+            <button class="ui button nav-button"><%= link_to "LOGOUT", logout_path %></button>
           <% elsif session[:petxpert_id]%>
-            <span class="nav-link"><%= link_to "MY ACCOUNT", petxpert_path(session[:petxpert_id])%></span>
-            <span= class="nav-link"><%= link_to "LOGOUT", logout_path %></span>
+            <button class="ui button nav-button"><%= link_to "MY ACCOUNT", petxpert_path(session[:petxpert_id])%></button>
+            <button class="ui button nav-button"><%= link_to "LOGOUT", logout_path %></button>
           <% else %>
-            <span class="nav-link"><%= link_to "PET OWNER LOGIN", user_login_path %></span>
-            <span class="nav-link"><%= link_to "PETXPERT LOGIN", petxpert_login_path%></span>
+            <button class="ui button nav-button"><%= link_to "PET OWNER LOGIN", user_login_path %></button>
+            <button class="ui button nav-button"><%= link_to "PETXPERT LOGIN", petxpert_login_path%></button>
           <% end %>  
       </div>
     </div>

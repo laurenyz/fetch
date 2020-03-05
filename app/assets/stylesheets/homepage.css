@@ -1,7 +1,4 @@
 .home-box {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
     background-image: url("homepage.jpg");
     height: 100%;
     background-size: cover;
@@ -34,12 +31,11 @@
 
 .dog-quote {
     margin: 5px;
+    font-size: 1vw;
 }
 
 .cat-quote {
     margin: 5px;
+    font-size: 1vw;
 }
 
-.foreground {
-    backdrop-filter: blur(0.8);
-  }
