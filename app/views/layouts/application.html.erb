@@ -8,29 +8,27 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   </head>
 
   <body>
 
     <div class="ui secondary menu">
     
-      <span><%= link_to "Home", homepage_path %></span>
-      <span><%= link_to "Cities", locations_path%></span>
+      <span class="nav-link"><%= link_to "HOME", homepage_path %></span>
+      <span class="nav-link"><%= link_to "CITIES", locations_path%></span>
 
-      <div class="right menu">
-        
-          <div>
-            <% if session[:user_id]%>
-              <span><%= link_to "My Account", user_path(session[:user_id])%></span>
-              <span><%= link_to "Logout", logout_path %></span>
-            <% elsif session[:petxpert_id]%>
-              <span><%= link_to "My Account", petxpert_path(session[:petxpert_id])%></span>
-              <span><%= link_to "Logout", logout_path %></span>
-            <% else %>
-              <span><%= link_to "Pet Owner Login", user_login_path %></span>
-              <span><%= link_to "PetXpert Login", petxpert_login_path%></span>
-          <% end %>
-            </div>   
+      <div class="right menu"> 
+          <% if session[:user_id]%>
+            <span class="nav-link"><%= link_to "MY ACCOUNT", user_path(session[:user_id])%></span>
+            <span class="nav-link"><%= link_to "LOGOUT", logout_path %></span>
+          <% elsif session[:petxpert_id]%>
+            <span class="nav-link"><%= link_to "MY ACCOUNT", petxpert_path(session[:petxpert_id])%></span>
+            <span= class="nav-link"><%= link_to "LOGOUT", logout_path %></span>
+          <% else %>
+            <span class="nav-link"><%= link_to "PET OWNER LOGIN", user_login_path %></span>
+            <span class="nav-link"><%= link_to "PETXPERT LOGIN", petxpert_login_path%></span>
+          <% end %>  
       </div>
     </div>
   

@@ -1,3 +1,45 @@
-.ui.secondary.menu {
-    margin-left: 100px;
- }
+.home-box {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    background-image: url("homepage.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+/* .credit-button {
+    position: right;
+} */
+
+.title-name {
+    margin: 0px 10px;
+    padding-top: 2%;
+    font-family: fantasy;
+    font-size: 10vw;
+    color: rgb(207, 178, 182); 
+}
+
+.sub-title {
+    margin: 0px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(207, 178, 182);
+    font-size: 2vw;
+}
+
+.home-quotes {
+    margin-top: 200px;
+    margin-left: 550px;
+    color: rgb(48, 45, 45);
+}
+
+.dog-quote {
+    margin: 5px;
+}
+
+.cat-quote {
+    margin: 5px;
+}
+
+.foreground {
+    backdrop-filter: blur(0.8);
+  }
