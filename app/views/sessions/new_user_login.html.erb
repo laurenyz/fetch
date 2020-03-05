@@ -5,17 +5,20 @@
     <%=flash[:notice]%>
     </div>
 
-    <%= form_tag user_login_path do %>
-        <div>
-        <%= label_tag :username, "Username"%>
+    <%= form_tag user_login_path, {:class => 'ui form'} do %>
+        <div class="field field-shrink">
+        <%= label_tag :username%>
         <%= text_field_tag :username %>
         </div>
-        <div>
+        <div class="field field-shrink">
         <%= label_tag :password %>
         <%= password_field_tag :password %>
-        </div>
-        <%= submit_tag "Login"%>
+        </div>  
+        <button class="ui button" type="submit">Login</button>
+       
     <% end %>
-
-    <%= link_to "Create Account", new_user_path %>
+    <button class="ui button create-button"><%= link_to "Create Account", new_user_path %></button>
+   
 </div>
+
+

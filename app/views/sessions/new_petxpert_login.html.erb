@@ -5,17 +5,18 @@
     <%= flash[:notice]%>
     </div>
 
-    <%= form_tag petxpert_login_path do %>
-        <div>
+    <%= form_tag petxpert_login_path, {:class => 'ui form'} do %>
+        <div class="field field-shrink">
         <%= label_tag :username, "Username"%>
         <%= text_field_tag :username %>
         </div>
-        <div>
+        <div class="field field-shrink">
         <%= label_tag :password %>
         <%= password_field_tag :password %>
         </div>
-        <%= submit_tag "Login"%>
+        <div class="field field-shrink">
+        <button class="ui button" type="submit">Login</button>
     <% end %>
 
-    <%= link_to "Register as a PetXpert", new_petxpert_path %>
+    <button class="ui button create-button"><%= link_to "Register as a PetXpert", new_petxpert_path %></button>
 </div>

@@ -9,5 +9,20 @@
     </ul>
     <% end %>
 
-    <%= render "form" %>
+    <%= form_for @service, html: {class: 'ui form'} do |f| %>
+    <div class="field field-shrink">
+    <%= f.label :name, "Type of Service:" %>
+    <%= f.text_field :name %>
+    </div>
+    <div class="field field-shrink">
+    <%= f.label :description, "Description:"%>
+    <%= f.text_area :description %>
+    </div>
+    <div class="field field-shrink">
+    <%= f.label :price, "Price:" %>
+    <%= f.number_field :price, step: :any %>
+    </div>
+    <button class="ui button" type="submit">Create Service</button>
+<% end %>
+    
 </div>
