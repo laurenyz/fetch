@@ -1,11 +1,14 @@
-<h1>Create a PetXpert Profile</h1>
+<div class="page-body petxpert-new-background">
 
-<% if @petxpert.errors %>
-<ul class = "error_list" %>
-    <% @petxpert.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
+    <h1 class="page-title">Create a PetXpert Profile</h1>
+
+    <% if @petxpert.errors %>
+    <ul class = "error_list" %>
+        <% @petxpert.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
     <% end %>
-</ul>
-<% end %>
 
-<%= render "form" %>
+    <%= render "form" %>
+</div>

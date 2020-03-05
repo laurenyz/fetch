@@ -1,3 +1,27 @@
 // Place all the styles related to the petxperts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.petxpert-edit-background{
+    background-image: url("petxpert_edit_background.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+.petxpert-index-background{
+    background-image: url("petxpert_index_background.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+.petxpert-new-background{
+    background-image: url("petxpert_new_background.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+.petxpert-show-background{
+    background-image: url("petxpert_show_background.jpg");
+    height: 100%;
+    background-size: cover;
+}

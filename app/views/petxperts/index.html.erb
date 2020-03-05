@@ -1,10 +1,12 @@
-<h1>Avaliable PetXperts:</h1>
-<ul>
-    <% @petxperts.each do |petxpert| %>
-    <li><%= link_to "#{petxpert.name.capitalize} - #{petxpert.location.city}", petxpert_path(petxpert) %></li>
-    <% end %>
-</ul>
+<div class="page-body petxpert-index-background">
+    <h1 class="page-title">Avaliable PetXperts:</h1>
+    <ul>
+        <% @petxperts.each do |petxpert| %>
+        <li><%= link_to "#{petxpert.name.capitalize} - #{petxpert.location.city}", petxpert_path(petxpert) %></li>
+        <% end %>
+    </ul>
 
-<div>
-    <%= link_to "Add a petxpert", new_petxpert_path %>
+    <div>
+        <%= link_to "Add a petxpert", new_petxpert_path %>
+    </div>
 </div>
