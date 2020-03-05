@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
     before_action :find_pet, only: [:show, :edit, :update, :destroy]
+    before_action :authorized_user, only: [:edit, :update, :destroy]
 
     def index
         @pets = Pet.all

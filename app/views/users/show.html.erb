@@ -11,22 +11,23 @@
     <% end %>
 </ul>
 
-<h2>Appointment Log:</h2>
-    <ul>
+<% if current_user == @user %>
+    <h2>Scheduled Appointments:</h2>
+        <ul>
         <% @user.appointments.each do |appointment|%>
         <li><%=link_to "#{appointment.written_date} - #{appointment.pet.name}", appointment_path(appointment)%></li>
         <% end %>
-    </ul>
+        </ul>
 
+    <h4><%= link_to "Add a Pet", new_pet_path%></h4>
 
-<h4><%= link_to "Add a Pet", new_pet_path%></h4>
+    <h4><%= link_to "Make an Appointment", new_appointment_path%></h4>
 
-<h4><%= link_to "Make an Appointment", new_appointment_path%></h4>
+    <h4><%= link_to "Edit Profile", edit_user_path%></h4>
 
-<h4><%= link_to "Edit Profile", edit_user_path%></h4>
-
-<%= form_tag(user_path(@user), method: :delete) do %>
-    <div>
-    <%= submit_tag "Delete this User" %>
-    </div>
+    <%= form_tag(user_path(@user), method: :delete) do %>
+        <div>
+        <%= submit_tag "Delete this User" %>
+        </div>
+    <% end %>
 <% end %>

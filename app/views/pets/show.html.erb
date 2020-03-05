@@ -5,11 +5,12 @@
 <h2>Age: <%=@pet.age%></h2>
 <h2>Bio: <%=@pet.description%></h2>
 
+<% if current_user == @pet.user %>
+    <%= link_to "Edit this Pet", edit_pet_path(@pet)%>
 
-<%= link_to "Edit this Pet", edit_pet_path(@pet)%>
-
-<%= form_tag(pet_path(@pet), method: :delete) do %>
-<div>
-    <%= submit_tag "Remove this Pet Profile" %>
-</div>
+    <%= form_tag(pet_path(@pet), method: :delete) do %>
+        <div>
+        <%= submit_tag "Delete Pet Profile" %>
+        </div>
+    <% end %>
 <% end %>

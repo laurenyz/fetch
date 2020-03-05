@@ -10,18 +10,21 @@
         <% end %>
     </ul>
 </h2>
-<h2>Scheduled Appointments:</h2>
-    <ul>
+
+<% if current_petxpert == @petxpert %>
+    <h2>Scheduled Appointments:</h2>
+        <ul>
         <% @petxpert.appointments.each do |appointment|%>
         <li><%= link_to "#{appointment.written_date} - #{appointment.pet.name}", appointment_path(appointment)%> </li>
         <% end %>
-    </ul>
+        </ul>
 
-<h4><%= link_to "Edit this PetXpert", edit_petxpert_path%></h4>
-<h4><%= link_to "Return to PetXperts", petxperts_path%></h4>
+    <h4><%= link_to "Edit this PetXpert", edit_petxpert_path%></h4>
+    <h4><%= link_to "Return to PetXperts", petxperts_path%></h4>
 
-<%= form_tag(petxpert_path(@petxpert), method: :delete) do %>
-    <div>
-    <%= submit_tag "Delete this PetXpert" %>
-    </div>
+    <%= form_tag(petxpert_path(@petxpert), method: :delete) do %>
+        <div>
+        <%= submit_tag "Delete this PetXpert" %>
+        </div>
+    <% end %>
 <% end %>
