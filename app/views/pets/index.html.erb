@@ -1,7 +1,11 @@
-<h1>All Pets</h1>
+<div class="page-body edit-background">
 
-<ul>
-<h2><%@pets.each do |pet|%></h2>
-<li><%= link_to pet.name, pet_path(pet) %></li>
-<% end %>
-</ul>
+    <h1 class="page-title">All Pets</h1>
+
+    <ul>
+    <%@pets.each do |pet|%>
+    <li><%= link_to pet.name, pet_path(pet) %></li>
+    <% end %>
+    </ul>
+
+</div>

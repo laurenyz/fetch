@@ -1,3 +1,33 @@
 // Place all the styles related to the pets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.edit-background{
+    background-image: url("cat_edit.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+.new-background{
+    background-image: url("new_pet.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+.pet-dog {
+    background-image: url("pet_dog.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+.pet-cat {
+    background-image: url("pet_cat.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+.pet-default{
+    background-image: url("pet_cat.jpg");
+    height: 100%;
+    background-size: cover;
+}

@@ -1,11 +1,14 @@
-<h1>Add a Pet</h1>
+<div class="page-body new-background">
 
-<% if @pet.errors %>
-<ul class = "error_list" %>
-    <% @pet.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
+    <h1 class="page-title">Add a Pet</h1>
+
+        <% if @pet.errors %>
+        <ul class = "error_list" %>
+        <% @pet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+        </ul>
     <% end %>
-</ul>
-<% end %>
 
 <%= render "form" %>
+</div>

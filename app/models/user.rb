@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     belongs_to :location
-    has_many :pets
+    has_many :pets, dependent: :destroy
     has_many :appointments, through: :pets
     has_many :services, through: :appointments
     has_many :petxperts, through: :appointments

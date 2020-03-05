@@ -14,6 +14,8 @@
  *= require_self
  */
 
+ /********************** nav bar ****************************/
+
  .ui.secondary.menu {
     padding: 15px 15px 0 15px;
     background-color: gray;
@@ -25,6 +27,8 @@
     font-family: "Courier New", Courier, monospace;
     font-size: 20px;
  } */
+
+ /***************************** page body ********************************/
 
  .page-body{
    padding-left: 15px;
@@ -38,4 +42,11 @@
     font-size: 3vw;
  }
 
- 
+ /****************** warnings ****************************/
+
+ .warning{
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-top: 15px;
+   color: red;
+ }
