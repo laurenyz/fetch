@@ -1,10 +1,12 @@
-<h1>Available Services:</h1>
-<ul>
-    <% @services.each do |service| %>
-    <li><%= link_to service.cap_service_name, service_path(service) %></li>
-    <% end %>
-</ul>
+<div class="page-body services-background">
+    <h1 class="page-title">Available Services:</h1>
+    <ul>
+        <% @services.each do |service| %>
+        <li><%= link_to service.cap_service_name, service_path(service) %></li>
+        <% end %>
+    </ul>
 
-<div>
-    <%= link_to "Add a Service", new_service_path %>
+    <div>
+        <%= link_to "Add a Service", new_service_path %>
+    </div>
 </div>
