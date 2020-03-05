@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     end
 
     def authorized_user
-        flash[:warning] = "You must be logged in."
+        flash[:warning1] = "You must be logged in."
         redirect_to user_login_path unless logged_in_user?
     end
 
@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
     end
 
     def authorized_petxpert
-        flash[:warning] = "You must be logged in."
+        flash[:warning2] = "You must be logged in."
         redirect_to petxpert_login_path unless logged_in_petxpert?
     end
 
