@@ -1,33 +1,35 @@
-<h1>Create a User Profile</h1>
+<div class="page-body user-background">
+    <h1 class="page-title">Create a User Profile</h1>
 
-<% if @user.errors %>
-<ul class = "error_list" %>
-    <% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
+    <% if @user.errors %>
+    <ul class = "error_list" %>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
     <% end %>
-</ul>
-<% end %>
 
-<%= form_for @user do |f| %>
-    <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    </div>
-    <div>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-    </div>
-    <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    </div>
-    <div>
-    <%= f.label :address%>
-    <%= f.text_area :address %>
-    </div>
-    <div>
-    <%=f.label :location %>
-    <%= f.collection_select :location_id, Location.all, :id, :city %>
-    </div>
-    <%= f.submit %>
-<% end %>
+    <%= form_for @user, html: {class: 'ui form'} do |f| %>
+        <div class="field field-shrink">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        </div>
+        <div class="field field-shrink">
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        </div>
+        <div class="field field-shrink">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        </div>
+        <div class="field field-shrink">
+        <%= f.label :address%>
+        <%= f.text_area :address %>
+        </div>
+        <div class="field field-shrink">
+        <%=f.label :location %>
+        <%= f.collection_select :location_id, Location.all, :id, :city %>
+        </div>
+        <button class="ui button" type="submit">Create Profile</button>
+    <% end %>
+</div>

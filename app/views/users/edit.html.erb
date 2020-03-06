@@ -1,26 +1,27 @@
+<div class="page-body user-background">
+    <h1 class="page-title">Edit <%=@user.name.titleize%>'s User Profile</h1>
 
-<h1 class="page-title">Edit <%=@user.name.titleize%>'s User Profile</h1>
-
-<%= form_for @user do |f| %>
-    <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    </div>
-    <div>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-    </div>
-    <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    </div>
-    <div>
-    <%= f.label :address%>
-    <%= f.text_area :address %>
-    </div>
-    <div>
-    <%=f.label :location %>
-    <%= f.collection_select :location_id, Location.all, :id, :city %>
-    </div>
-    <%= f.submit %>
-<% end %>
+    <%= form_for @user, html: {class: 'ui form'} do |f| %>
+        <div class="field field-shrink">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        </div>
+        <div class="field field-shrink">
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        </div>
+        <div class="field field-shrink">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        </div>
+        <div class="field field-shrink">
+        <%= f.label :address%>
+        <%= f.text_area :address %>
+        </div>
+        <div class="field field-shrink">
+        <%=f.label :location %>
+        <%= f.collection_select :location_id, Location.all, :id, :city %>
+        </div>
+        <button class="ui button" type="submit">Update Profile</button>
+    <% end %>
+</div>

@@ -2,11 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.petxpert-edit-background{
-    background-image: url("petxpert_edit_background.jpg");
-    height: 100%;
-    background-size: cover;
-}
+// .petxpert-edit-background{
+//     background-image: url("petxpert_edit_background.jpg");
+//     height: 100%;
+//     background-size: cover;
+// }
 
 .petxpert-index-background{
     background-image: url("petxpert_index_background.jpg");
@@ -14,10 +14,15 @@
     background-size: cover;
 }
 
-.petxpert-new-background{
-    background-image: url("petxpert_new_background.jpg");
-    height: 100%;
-    background-size: cover;
+// .petxpert-new-background{
+//     background-image: url("petxpert_new_background.jpg");
+//     height: 100%;
+//     background-size: cover;
+// }
+
+.petxpert-new-edit-background{
+    background-color: rgb(192, 161, 166);
+    height: cover;
 }
 
 .petxpert-show-background{
