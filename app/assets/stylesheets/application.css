@@ -75,6 +75,7 @@
 .user.profile-box{
   background-color:hsla(240, 6%, 79%, 0.8);
   width: 40%;
+  padding-bottom: 10px;
 }
 
 .pet.profile-box{
