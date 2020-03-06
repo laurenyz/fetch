@@ -1,5 +1,23 @@
 <div class="page-body edit-background">
     <h1 class="page-title">Edit <%=@pet.name%>'s Profile</h1>
 
-    <%= render "form" %>
+    <%= form_for @pet, html: {class: 'ui form'}  do |f| %>
+    <div class="field field-shrink">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    </div>
+    <div class="field field-shrink">
+    <%= f.label :species %>
+    <%= f.text_field :species %>
+    </div>
+    <div class="field field-shrink">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    </div>
+    <div class="field field-shrink">
+    <%= f.label :description, "Additional Information" %>
+    <%= f.text_area :description %>
+    </div>
+    <button class="ui button" type="submit">Update Pet Profile</button>
+<% end %>
 </div>

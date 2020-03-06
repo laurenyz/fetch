@@ -1,8 +1,13 @@
-<h1>Add Your Service Provider</h1>
-
-<%= form_tag create_with_petxpert_path do %>
-<%= label_tag :petxpert_id, "PetXpert:" %>
-<%= select_tag :petxpert_id, options_from_collection_for_select(@service.local_petxperts(@location), :id, :name)%>
-<%= submit_tag "Create Appointment" %>
-<% end %>
+<div class="page-body appointment-background">
+   <h1 class="page-title">Add Your Service Provider</h1>
+    <%= form_tag create_with_petxpert_path, {:class => 'ui form'} do %>
+        <div class="field field-shrink">
+        <%= label_tag :petxpert_id, "PetXpert:" %>
+        </div>
+        <div class="field field-shrink">
+        <%= select_tag :petxpert_id, options_from_collection_for_select(@service.local_petxperts(@location), :id, :name)%>
+        </div>
+        <button class="ui button" type="submit">Create Appointment</button>
+    <% end %>
+</div>
 

@@ -1,21 +1,24 @@
-<h1>Make an Appointment</h1>
+  <div class= "page-body appointment-background">
+    <h1 class= "page-title">Make an Appointment</h1>
 
-<%= form_tag create_appointment_path do %>
-<div>
-    <%= label_tag :pet_id, "Pet:" %>
-    <%= select_tag :pet_id, options_from_collection_for_select(@user.pets, :id, :name) %>
+    <%= form_tag create_appointment_path, {:class => 'ui form'} do %>
+        <div class="field field-shrink">
+        <%= label_tag :pet_id, "Pet:" %>
+        <%= select_tag :pet_id, options_from_collection_for_select(@user.pets, :id, :name) %>
+        </div>
+        <div class="field field-shrink">
+        <%= label_tag :service_id, "Service:" %>
+        <%= select_tag :service_id, options_from_collection_for_select(@user.location.services.uniq, :id, :name) %>
+        </div>
+        <div class="field field-shrink">
+        <%= label_tag :date, "Date:" %>
+        <%= date_field_tag :date %>
+        </div>
+        <div class="field field-shrink">
+        <%= label_tag :time, "Time:" %>
+        <%= time_select :appt_time, :time %>
+        </div>
+        <button class="ui button" type="submit">Continue</button>
+        <% end %>
     </div>
-    <div>
-    <%= label_tag :service_id, "Service:" %>
-    <%= select_tag :service_id, options_from_collection_for_select(@user.location.services.uniq, :id, :name) %>
-    </div>
-    <div>
-    <%= label_tag :date, "Date:" %>
-    <%= date_field_tag :date %>
-    </div>
-    <div>
-    <%= label_tag :time, "Time:" %>
-    <%= time_select :appt_time, :time %>
-    </div>
-    <%= submit_tag "Continue" %>
-    <% end %>
+</div>
