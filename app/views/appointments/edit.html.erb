@@ -1,21 +1,25 @@
-<h1>Edit <%=@appointment.pet.name%>'s Appointment</h1>
+<div class= "page-body appointment-background">
+<div class="page-body appointment profile-box">
+    <h1 class="page-title">Edit Appointment</h1>
 
-<%= form_tag update_appointment_path do %>
-<div>
-    <%= label_tag :pet_id, "Pet:" %>
-    <%= select_tag :pet_id, options_from_collection_for_select(@user.pets, :id, :name) %>
-    </div>
-    <div>
-    <%= label_tag :service_id, "Service:" %>
-    <%= select_tag :service_id, options_from_collection_for_select(Service.all, :id, :name) %>
-    </div>
-    <div>
-    <%= label_tag :date, "Date:" %>
-    <%= date_field_tag :date %>
-    </div>
-    <div>
-    <%= label_tag :time, "Time:" %>
-    <%= time_select :appt_time, :time %>
-    </div>
-    <%= submit_tag "Continue" %>
+    <%= form_tag update_appointment_path, {:class => 'ui form'} do %>
+        <div class="field">
+        <%= label_tag :pet_id, "Pet:" %>
+        <%= select_tag :pet_id, options_from_collection_for_select(@user.pets, :id, :name) %>
+        </div>
+        <div class="field">
+        <%= label_tag :service_id, "Service:" %>
+        <%= select_tag :service_id, options_from_collection_for_select(Service.all, :id, :name) %>
+        </div>
+        <div class="field">
+        <%= label_tag :date, "Date:" %>
+        <%= date_field_tag :date %>
+        </div>
+        <div class="field">
+        <%= label_tag :time, "Time:" %>
+        <%= time_select :appt_time, :time %>
+        </div>
+        <button class="ui button" type="submit">Continue</button>
     <% end %>
+    </div>
+</div>

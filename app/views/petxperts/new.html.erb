@@ -1,5 +1,6 @@
 <div class="page-body petxpert-new-edit-background">
-    <h1 class="page-title">Create a PetXpert Profile</h1>
+    <div class="page-body petxpert-form profile-box">
+    <h1 class="page-title">Create PetXpert Profile</h1>
 
     <% if @petxpert.errors %>
     <ul class = "error_list" %>
@@ -10,30 +11,31 @@
     <% end %>
 
     <%= form_for @petxpert, html: {class: 'ui form'}  do |f| %>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :name%>
     <%= f.text_field :name %>
     </div>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :username%>
     <%= f.text_field :username %>
     </div>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :password %>
     <%= f.password_field :password %>
     </div>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :description, "About Me"%>
     <%= f.text_area :description %>
     </div>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :location %>
     <%= f.collection_select :location_id, Location.all, :id, :city %>
     </div>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :services %>
     <%= f.collection_check_boxes :service_ids, Service.all, :id, :name%>
     </div>
     <button class="ui button" type="submit">Create Profile</button>
 <% end %>
+</div>
 </div>

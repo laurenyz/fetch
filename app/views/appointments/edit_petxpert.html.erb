@@ -1,8 +1,13 @@
-<h1>Edit Your Service Provider</h1>
-
-<%= form_tag update_with_petxpert_path do %>
-<%= label_tag :petxpert_id, "PetXpert:" %>
-<%= select_tag :petxpert_id, options_from_collection_for_select(@service.local_petxperts(@location), :id, :name)%>
-<%= submit_tag "Complete Update" %>
-<% end %>
+<div class="page-body appointment-background">
+<div class="page-body appointment profile-box">  
+    <h1 class="page-title">Edit PetXpert</h1>
+    <%= form_tag update_with_petxpert_path, {:class => 'ui form'} do %>
+    <div class="field">
+    <%= label_tag :petxpert_id, "PetXpert:" %>
+    <%= select_tag :petxpert_id, options_from_collection_for_select(@service.local_petxperts(@location), :id, :name)%>
+</div>
+<button class="ui button" type="submit">Complete Update</button>
+    <% end %>
+</div>
+</div>
 

@@ -1,22 +1,19 @@
-<h1>Appointment for: <%=@appointment.pet.name%></h1>
+<div class="page-body appointment-background">
+<div class="page-body appointment profile-box">  
+    <h1 class="page-title">Scheduled Appointment</h1>
+    <h3>Pet: <%=@appointment.pet.name%></h3>
+    <h3>Date: <%= @appointment.written_date%></h3>
+    <h3>Time: <%= @appointment.written_time%></h3>
+    <h3>Service: <%=@appointment.service.cap_service_name%></h3>
+    <h3>PetXpert: <%=link_to @appointment.petxpert.name, petxpert_path(@appointment.petxpert)%></h3>
+    <h3>Cost: <%=number_to_currency(@appointment.service.price)%></h3>
 
-<h2>Date: <%= @appointment.written_date%></h2>
 
-<h2>Time: <%= @appointment.written_time%></h3>
+    <button class="ui button"><%= link_to "Edit Appointment", edit_appointment_path %></button>
 
-<h3>Service: <%=@appointment.service.cap_service_name%></h3>
-
-<h3>PetXpert: <%=link_to @appointment.petxpert.name, petxpert_path(@appointment.petxpert)%></h3>
-
-<h3>Cost: <%=number_to_currency(@appointment.service.price)%></h3>
-
-<%= link_to "Edit this Appointment", edit_appointment_path %>
-
-<%= form_tag(appointment_path(@appointment), method: :delete) do %>
-<div>
-    <%= submit_tag "Delete Appointment" %>
+    <%= form_tag(appointment_path(@appointment), method: :delete) do %>
+        <button class="ui button delete-button"><% submit_tag%>Delete Appointment</button>
+    <% end %>
+   
 </div>
-<% end %>
-<div>
-    <%= link_to "Return to Profile", user_path(@appointment.pet.user)%>
 </div>

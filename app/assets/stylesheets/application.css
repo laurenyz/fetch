@@ -23,10 +23,12 @@
  
  .ui.button.create-button{
    margin-top: 5px;
+   margin-bottom: 10px;
  }
 
  .ui.button.delete-button{
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 
  .field.field-shrink{
@@ -62,3 +64,50 @@
    padding-top: 15px;
    color: red; 
  }
+
+ /* ******************** profile box ********************* */
+ 
+.profile-box{
+    border-radius: 10px;
+    width: 30%;
+}
+
+.user.profile-box{
+  background-color:hsla(240, 6%, 79%, 0.8);
+  width: 40%;
+}
+
+.pet.profile-box{
+  background-color:hsla(243, 24%, 84%, 0.7);
+  padding-bottom: 5px;
+}
+
+.pet-form.profile-box{
+  background-color:hsla(243, 24%, 84%, 0.7);
+  padding-bottom: 10px;
+}
+
+.petxpert.profile-box{
+  background-color:hsla(240, 17%, 75%, 0.9);
+  width: 35%;
+  padding-bottom: 10px;
+}
+
+.petxpert-form.profile-box{
+  background-color:hsla(135, 3%, 24%, 0.2);
+  padding-bottom: 10px;
+  width: 42%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.appointment.profile-box{
+  background-color:hsla(135, 3%, 24%, 0.2);
+  padding-bottom: 10px;
+  width: 42%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+

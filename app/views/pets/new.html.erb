@@ -1,4 +1,5 @@
 <div class="page-body new-background">
+    <div class="page-body pet-form profile-box">
     <h1 class="page-title">Add Pet Profile</h1>
 
         <% if @pet.errors %>
@@ -10,22 +11,23 @@
     <% end %>
 
     <%= form_for @pet, html: {class: 'ui form'}  do |f| %>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
     </div>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :species %>
     <%= f.text_field :species %>
     </div>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :age %>
     <%= f.number_field :age %>
     </div>
-    <div class="field field-shrink">
+    <div class="field">
     <%= f.label :description, "Additional Information" %>
     <%= f.text_area :description %>
     </div>
     <button class="ui button" type="submit">Create Pet Profile</button>
 <% end %>
+</div>
 </div>

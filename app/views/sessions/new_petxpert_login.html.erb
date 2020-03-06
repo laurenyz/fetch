@@ -1,22 +1,23 @@
 <div class="page-body petxpert-login">
-    <h1 class="page-title">PetXpert Login</h1>
+    <div class="page-body login-box">
+        <h1 class="page-title">PetXpert Login</h1>
 
-    <div>
-    <%= flash[:notice]%>
-    </div>
-
-    <%= form_tag petxpert_login_path, {:class => 'ui form'} do %>
-        <div class="field field-shrink">
-        <%= label_tag :username, "Username"%>
-        <%= text_field_tag :username %>
+        <div>
+        <%= flash[:notice]%>
         </div>
-        <div class="field field-shrink">
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
-        </div>  
-        <button class="ui button" type="submit">Login</button>
-    <% end %>
 
-    <button class="ui button create-button"><%= link_to "Register as a PetXpert", new_petxpert_path %></button>
+        <%= form_tag petxpert_login_path, {:class => 'ui form'} do %>
+            <div class="field">
+            <%= label_tag :username, "Username"%>
+            <%= text_field_tag :username %>
+            </div>
+            <div class="field">
+            <%= label_tag :password %>
+            <%= password_field_tag :password %>
+            </div>  
+            <button class="ui button" type="submit">Login</button>
+        <% end %>
 
+        <button class="ui button create-button"><%= link_to "Register as a PetXpert", new_petxpert_path %></button>
+    </div>
 </div>
