@@ -1,14 +1,16 @@
 <% if @location.city == "Washington, DC" %>
-<div class="wash-photo">
+<div class="page-body wash-photo">
+<div class="page-body location-show1 profile-box">
 <% elsif @location.city == "New York, NY" %>
-<div class="nyc-photo">
+<div class="page-body nyc-photo">
+<div class="page-body location-show2 profile-box">
 <% elsif @location.city == "Buffalo, NY" %>
-<div class="buff-photo">
+<div class="page-body buff-photo">
+<div class="page-body location-show3 profile-box">
 <% else %>
-<div class="loc-default-background">
+<div class="page-body loc-default-background">
+<div class="page-body location-show4 profile-box">
 <% end %>
-
-    <div class="page-body">
             
         <h1 class="page-title"><%=@location.city%></h1>
 
@@ -26,4 +28,5 @@
         <% end %>
         </ul>
     </div>
+</div>
 </div>

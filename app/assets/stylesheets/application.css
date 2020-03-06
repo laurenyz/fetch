@@ -109,5 +109,44 @@
   margin-right: auto;
 }
 
+.location.profile-box{
+  background-color:hsla(240, 1%, 61%, 0.6);
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+.location-show1.profile-box{
+  background-color:hsla(347, 21%, 92%, 0.8);
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+.location-show2.profile-box{
+  background-color:hsla(225, 35%, 91%, 0.6);
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+.location-show3.profile-box{
+  background-color:hsla(227, 11%, 84%, 0.5);
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+.location-show4.profile-box{
+  background-color:hsla(225, 35%, 91%, 0.6);
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+.service.profile-box{
+  background-color:hsla(225, 35%, 91%, 0.7);
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+
+
+
 
 

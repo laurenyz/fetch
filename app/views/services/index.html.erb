@@ -1,4 +1,5 @@
 <div class="page-body services-background">
+<div class="page-body service profile-box">
     <h1 class="page-title">Available Services:</h1>
     <ul>
         <% @services.each do |service| %>
@@ -9,4 +10,5 @@
     <div>
         <button class="ui button"><%= link_to "+ Service", new_service_path %></button>
     </div>
+</div>
 </div>
