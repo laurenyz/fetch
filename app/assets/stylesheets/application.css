@@ -14,7 +14,7 @@
  *= require_self
  */
 
- /********************** nav bar ****************************/
+ /********************** nav bar and buttons ****************************/
 
  .ui.secondary.menu {
     padding: 15px 15px 0 15px;
@@ -24,6 +24,10 @@
  .ui.button.create-button{
    margin-top: 5px;
  }
+
+ .ui.button.delete-button{
+  margin-top: 5px;
+}
 
  .field.field-shrink{
    width: 25%;
