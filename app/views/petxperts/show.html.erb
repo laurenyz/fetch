@@ -2,32 +2,32 @@
     
     <h1 class="page-title">Meet Your PetXpert</h1>
     
-    <h2>Name: <%=@petxpert.name.capitalize%></h2>
-    <h2>Username: <%=@petxpert.username %></h2>
-    <h2>About Me: <%=@petxpert.description%></h2>
-    <h2>Location: <%=@petxpert.location.city%></h2>
-    <h2>Services:
+    <h3>Name: <%=@petxpert.name.capitalize%></h3>
+    <h3>Username: <%=@petxpert.username %></h3>
+    <h3>About Me: <%=@petxpert.description%></h3>
+    <h3>Location: <%=@petxpert.location.city%></h3>
+    <h3>Services:
         <ul>
             <% @petxpert.services.each do |service|%>
             <li><%= link_to service.name, service_path(service) %></li>
             <% end %>
         </ul>
-    </h2>
+    </h3>
 
     <% if current_petxpert == @petxpert %>
-        <h2>Scheduled Appointments:</h2>
+        <h3>Scheduled Appointments:</h3>
             <ul>
             <% @petxpert.appointments.each do |appointment|%>
             <li><%= link_to "#{appointment.written_date} - #{appointment.pet.name}", appointment_path(appointment)%> </li>
             <% end %>
             </ul>
 
-        <h4><%= link_to "Edit this PetXpert", edit_petxpert_path%></h4>
-        <h4><%= link_to "Return to PetXperts", petxperts_path%></h4>
+        <button class="ui button"><%= link_to "Edit this PetXpert", edit_petxpert_path%></button>
+        <button class="ui button"><%= link_to "Return to PetXperts", petxperts_path%></button>
 
         <%= form_tag(petxpert_path(@petxpert), method: :delete) do %>
             <div>
-            <%= submit_tag "Delete this PetXpert" %>
+                <button class="ui button delete-button"><%submit_tag%>Delete Profile</button>
             </div>
         <% end %>
     <% end %>

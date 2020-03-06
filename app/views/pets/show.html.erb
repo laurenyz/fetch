@@ -16,11 +16,11 @@
         <h2>Bio: <%=@pet.description%></h2>
 
         <% if current_user == @pet.user %>
-            <%= link_to "Edit this Pet", edit_pet_path(@pet)%>
+            <button class="ui button"><%= link_to "Edit this Pet", edit_pet_path(@pet)%></button>
 
             <%= form_tag(pet_path(@pet), method: :delete) do %>
                 <div>
-                <%= submit_tag "Delete Pet Profile" %>
+                    <button class="ui button delete-button"><%submit_tag%>Delete Pet Profile</button>
                 </div>
             <% end %>
         <% end %>

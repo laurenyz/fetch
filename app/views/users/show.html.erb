@@ -22,11 +22,12 @@
 
             <button class="ui button"><%= link_to "+ Pet", new_pet_path%></button>
             <button class="ui button"><%= link_to "+ Appointment", new_appointment_path%></button>
-            <button class="ui button"><%= link_to "Edit Profile", edit_user_path%></button>
-        
+            <div>
+            <button class="ui button create-button"><%= link_to "Edit Profile", edit_user_path%></button>
+            </div>
             <%= form_tag(user_path(@user), method: :delete) do %>
             <div>
-                <button class="ui button delete-button"><%submit_tag%>Delete</button>
+                <button class="ui button delete-button"><%submit_tag%>Delete Profile</button>
             </div>
         <% end %>
     <% end %>
